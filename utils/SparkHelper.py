@@ -42,3 +42,10 @@ class SessionBuilder:
             builder = builder.config(param, setting)
 
         return builder
+
+
+    class LayoutProvider:
+    
+        @classmethod
+        def get_schema(cls, schema: str) -> StructType:
+            return getattr(LayoutProvider, f"_generate_{schema}_schema")()
