@@ -1,4 +1,5 @@
 from pyspark.sql import SparkSession
+from pyspark.sql.types import *
 
 
 class SessionBuilder:
@@ -44,8 +45,8 @@ class SessionBuilder:
         return builder
 
 
-    class LayoutProvider:
-    
-        @classmethod
-        def get_schema(cls, schema: str) -> StructType:
-            return getattr(LayoutProvider, f"_generate_{schema}_schema")()
+class LayoutProvider:
+
+    @classmethod
+    def get_schema(cls, schema: str) -> StructType:
+        return getattr(LayoutProvider, f"_generate_{schema}_schema")()
