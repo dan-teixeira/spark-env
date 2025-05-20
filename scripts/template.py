@@ -1,0 +1,22 @@
+# %%
+import os
+from dotenv import load_dotenv
+from utils.SparkHelper import SessionBuilder
+from delta.tables import DeltaTable
+import pyspark.sql.functions as F
+from datetime import date, timedelta
+
+load_dotenv()
+
+# %%
+
+spark = (
+    SessionBuilder.get_builder()
+    .appName("teste")
+    .config("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
+    .config("spark.sql.shuffle.partitions", 200)
+    .getOrCreate()
+)
+
+# %%
+
