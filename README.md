@@ -1,3 +1,3 @@
 # spark-env
 
-A simple script to run Spark locally for quick testing and development.
+A simple project to run Spark locally for quick testing and development.
