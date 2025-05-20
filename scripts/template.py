@@ -11,7 +11,7 @@ load_dotenv()
 
 spark = (
     SessionBuilder.get_builder()
-    .appName("teste")
+    .appName("template")
     .config("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
     .config("spark.sql.shuffle.partitions", 200)
     .getOrCreate()
