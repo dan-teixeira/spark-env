@@ -35,6 +35,7 @@ class SessionBuilder:
             "spark.local.dir": "/tmp/spark/",
             "spark.sql.warehouse.dir": "/tmp/spark/spark-warehouse/",
             "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+            "spark.sql.adaptive.enabled": "true",
             "spark.sql.adaptive.coalescePartitions.parallelismFirst": "false",
             "spark.sql.adaptive.advisoryPartitionSizeInBytes": "128MB",
         }
