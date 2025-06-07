@@ -1,3 +1,4 @@
+# %%
 import os
 import sys
 import logging
@@ -7,7 +8,6 @@ from datetime import date
 from utils.SparkHelper import SessionBuilder
 from delta.tables import DeltaTable
 import pyspark.sql.functions as F
-
 # %%
 
 # Load variables
